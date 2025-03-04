@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d6106ab3-acfa-4a78-8fa7-dd215f9f89d2)# TP : Création et Déploiement d'un Modèle de Machine Learning sur Azure avec Sécurité et Haute Disponibilité
+# TP : Création et Déploiement d'un Modèle de Machine Learning sur Azure avec Sécurité et Haute Disponibilité
 
 ## Objectifs du TP :
 
