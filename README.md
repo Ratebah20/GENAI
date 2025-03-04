@@ -7,7 +7,7 @@
  - Mettre en place une infrastructure sécurisée et hautement disponible sur Azure.
 
 ### 1) Création et Entraînement du Modèle de Machine Learning
-A) Utiliser Azure Machine Learning Studio pour créer et entraîner un modèle prédictif
+A) Utiliser Azure Machine Learning Studio pour créer et entraîner un modèle prédictif,
 Création de workplace pour machine learning 
 
 ![image](https://github.com/user-attachments/assets/b59027d8-2b2a-4385-9904-16602e864493)
