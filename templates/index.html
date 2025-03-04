@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de Films</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prédiction de Films</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="movieSelect">Sélectionnez un film:</label>
+                <select id="movieSelect" required>
+                    <option value="">-- Choisissez un film --</option>
+                    {% for movie in movies %}
+                    <option value="{{ movie.id }}" data-name="{{ movie.name }}">{{ movie.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit">Prédire</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Résultat de la prédiction:</h2>
+            <p id="predictionValue"></p>
+            <div id="predictionDetails" class="prediction-details">
+                <h3>Détails de la prédiction:</h3>
+                <div class="prediction-grid">
+                    <div class="prediction-item">
+                        <h4>Entrée</h4>
+                        <p><strong>Film ID:</strong> <span id="detailMovieId"></span></p>
+                        <p><strong>Nom du film:</strong> <span id="detailMovieName"></span></p>
+                    </div>
+                    <div class="prediction-item">
+                        <h4>Sortie du modèle</h4>
+                        <p><strong>User ID:</strong> <span id="detailUserId"></span></p>
+                        <p><strong>Movie ID:</strong> <span id="detailMovieId2"></span></p>
+                        <p><strong>Rating:</strong> <span id="detailRating"></span></p>
+                        <p><strong>Timestamp:</strong> <span id="detailTimestamp"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

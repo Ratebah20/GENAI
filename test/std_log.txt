@@ -1,0 +1,89 @@
+Failure while loading azureml_run_type_providers. Failed to load entrypoint azureml.PipelineRun = azureml.pipeline.core.run:PipelineRun._from_dto with exception (azureml-core 1.47.0 (/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages), Requirement.parse('azureml-core~=1.54.0')).
+Failure while loading azureml_run_type_providers. Failed to load entrypoint azureml.ReusedStepRun = azureml.pipeline.core.run:StepRun._from_reused_dto with exception (azureml-core 1.47.0 (/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages), Requirement.parse('azureml-core~=1.54.0')).
+Failure while loading azureml_run_type_providers. Failed to load entrypoint azureml.StepRun = azureml.pipeline.core.run:StepRun._from_dto with exception (azureml-core 1.47.0 (/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages), Requirement.parse('azureml-core~=1.54.0')).
+Failure while loading azureml_run_type_providers. Failed to load entrypoint azureml.scriptrun = azureml.core.script_run:ScriptRun._from_run_dto with exception (cryptography 42.0.4 (/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages), Requirement.parse('cryptography!=1.9,!=2.0.*,!=2.1.*,!=2.2.*,<41')).
+Session_id = b87ff695-e4ed-466c-b636-5a699b33a76a
+Invoking module by urldecode_invoker 0.0.8.
+
+Module type: official module.
+
+Using runpy to invoke module 'azureml.studio.modulehost.module_invoker'.
+
+2025-03-04 10:39:35,019 studio.modulehost    INFO       Reset logging level to DEBUG
+2025-03-04 10:39:35,019 studio.modulehost    INFO       Load pyarrow.parquet explicitly: <module 'pyarrow.parquet' from '/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages/pyarrow/parquet/__init__.py'>
+2025-03-04 10:39:35,019 studio.core          INFO       execute_with_cli - Start:
+2025-03-04 10:39:35,020 studio.modulehost    INFO       |   ALGHOST 0.0.182
+2025-03-04 10:39:35,022 studio.modulehost    INFO       |   CLI arguments parsed: {'module_name': 'azureml.studio.modules.data_format_conversions.convert_to_dataset.convert_to_dataset', 'OutputPortsInternal': {'Results dataset': '/mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/Results_dataset'}, 'InputPortsInternal': {'Dataset': '/mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset'}, 'ModuleParameters': {'Action': 'None'}}
+2025-03-04 10:39:35,261 studio.modulehost    INFO       |   Invoking ModuleEntry(azureml.studio.modules.data_format_conversions.convert_to_dataset.convert_to_dataset; ConvertToDatasetModule; run)
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   Input Ports:
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   |   Dataset = <azureml.studio.modulehost.cli_parser.CliInputValue object at 0x1547ab3e0c40>
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   Output Ports:
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   |   Results dataset = /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/Results_dataset
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   Parameters:
+2025-03-04 10:39:35,261 studio.core          DEBUG      |   |   Action = None
+2025-03-04 10:39:35,262 studio.core          DEBUG      |   Environment Variables:
+2025-03-04 10:39:35,262 studio.core          DEBUG      |   |   AZUREML_DATAREFERENCE_AZURE_ML_INPUT_DATASET = /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset
+2025-03-04 10:39:35,262 studio.core          DEBUG      |   |   AZUREML_DATAREFERENCE_AZURE_ML_INPUT_Dataset = /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset
+2025-03-04 10:39:35,262 studio.core          DEBUG      |   |   AZUREML_DATAREFERENCE_DATASET = /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset
+2025-03-04 10:39:35,262 studio.core          DEBUG      |   |   AZUREML_DATAREFERENCE_Dataset = /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset
+2025-03-04 10:39:35,262 studio.core          INFO       |   Reflect input ports and parameters - Start:
+2025-03-04 10:39:35,262 studio.core          INFO       |   |   Handle input port "Dataset" - Start:
+2025-03-04 10:39:35,262 studio.core          INFO       |   |   |   Mount/Download dataset to '/mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset' - Start:
+2025-03-04 10:39:35,262 studio.modulehost    DEBUG      |   |   |   |   Content of directory /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset:
+2025-03-04 10:39:35,293 studio.modulehost    DEBUG      |   |   |   |   |   _data.parquet
+2025-03-04 10:39:35,293 studio.modulehost    DEBUG      |   |   |   |   |   _data.visualization
+2025-03-04 10:39:35,294 studio.modulehost    DEBUG      |   |   |   |   |   _meta.yaml
+2025-03-04 10:39:35,294 studio.modulehost    DEBUG      |   |   |   |   |   data_type.json
+2025-03-04 10:39:35,302 studio.modulehost    DEBUG      |   |   |   |   |   schema/_schema.json
+2025-03-04 10:39:35,302 studio.core          INFO       |   |   |   Mount/Download dataset to '/mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset' - End with 0.0397s elapsed.
+2025-03-04 10:39:35,312 studio.core          INFO       |   |   |   Try to read from /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset via meta - Start:
+2025-03-04 10:39:35,577 studio.common        DEBUG      |   |   |   |   Load schema successfully.
+2025-03-04 10:39:35,578 studio.common        INFO       |   |   |   |   Load meta data from directory successfully, data=DataFrameDirectory(meta={'type': 'DataFrameDirectory', 'visualization': [{'type': 'Visualization', 'path': '_data.visualization'}], 'extension': {}, 'format': 'Parquet', 'data': '_data.parquet', 'schema': 'schema/_schema.json'}), type=<class 'azureml.studio.common.datatable.data_table_directory.DataTableDirectory'>
+2025-03-04 10:39:35,614 studio.core          INFO       |   |   |   Try to read from /mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/INPUT_Dataset via meta - End with 0.3026s elapsed.
+2025-03-04 10:39:35,615 studio.core          INFO       |   |   Handle input port "Dataset" - End with 0.3526s elapsed.
+2025-03-04 10:39:35,615 studio.modulehost    INFO       |   |   Parse enum parameter
+2025-03-04 10:39:35,615 studio.core          INFO       |   Reflect input ports and parameters - End with 0.3530s elapsed.
+2025-03-04 10:39:35,615 studio.core          INFO       |   ConvertToDatasetModule.run - Start:
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   kwargs:
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   table = <azureml.studio.common.datatable.data_table.DataTable object at 0x1547aafb3fd0>
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   action = <ConvertToDatasetActionMethod.NONE: 1>
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   validated_args:
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   table = <azureml.studio.common.datatable.data_table.DataTable object at 0x1547aafb3fd0>
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   action = <ConvertToDatasetActionMethod.NONE: 1>
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   custom_missing_value = None
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   to_remove = None
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   from_custom_remove = None
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   |   replace_with = None
+2025-03-04 10:39:35,615 studio.core          DEBUG      |   |   return:
+2025-03-04 10:39:35,616 studio.core          DEBUG      |   |   |   [0] = <DataTable "Dataset" (45494 Rows, 4 Cols) at 0x00001547AAFB3FD0>
+2025-03-04 10:39:35,616 studio.core          INFO       |   ConvertToDatasetModule.run - End with 0.0006s elapsed.
+2025-03-04 10:39:35,616 studio.core          INFO       |   ModuleReflector._handle_output_ports - Start:
+2025-03-04 10:39:35,616 studio.core          INFO       |   |   Handle output port "Results dataset" - Start:
+2025-03-04 10:39:35,616 studio.modulehost    INFO       |   |   |   Data type: Dataset
+2025-03-04 10:39:35,616 studio.modulehost    INFO       |   |   |   Create directory: '/mnt/azureml/cr/j/3e7f767ba7a34c81a14f6859e541fffd/cap/data-capability/wd/Results_dataset'
+2025-03-04 10:39:35,616 studio.core          INFO       |   |   |   Write pickle file 'data.dataset' - Start:
+2025-03-04 10:39:35,617 studio.core          INFO       |   |   |   Write pickle file 'data.dataset' - End with 0.0002s elapsed.
+2025-03-04 10:39:35,617 studio.core          INFO       |   |   |   Write to parquet file 'data.dataset.parquet'. Rows: 45494, Columns: 4. - Start:
+/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/site-packages/azureml/studio/core/io/data_frame_utils.py:77: FutureWarning: the 'fname'' keyword is deprecated, use 'path' instead
+  df.to_parquet(fname=parquet_file_name, engine=_PARQUET_ENGINE,
+2025-03-04 10:39:35,648 studio.core          INFO       |   |   |   Write to parquet file 'data.dataset.parquet'. Rows: 45494, Columns: 4. - End with 0.0309s elapsed.
+2025-03-04 10:39:35,648 studio.core          INFO       |   |   |   Create sidecar file 'data.visualization' - Start:
+2025-03-04 10:39:35,694 studio.core          INFO       |   |   |   Create sidecar file 'data.visualization' - End with 0.0455s elapsed.
+2025-03-04 10:39:35,697 studio.common        INFO       |   |   |   Writing meta successfully, datatype=DataTypes.DATASET
+2025-03-04 10:39:35,697 studio.core          INFO       |   |   Handle output port "Results dataset" - End with 0.0812s elapsed.
+2025-03-04 10:39:35,697 studio.core          INFO       |   ModuleReflector._handle_output_ports - End with 0.0813s elapsed.
+2025-03-04 10:39:35,697 studio.core          INFO       |   ModuleStatistics.save_to_azureml - Start:
+2025-03-04 10:39:36,152 studio.core          INFO       |   ModuleStatistics.save_to_azureml - End with 0.4549s elapsed.
+2025-03-04 10:39:36,153 studio.core          INFO       execute_with_cli - End with 1.1333s elapsed.
+Cleaning up all outstanding Run operations, waiting 300.0 seconds
+1 items cleaning up...
+Cleanup took 0.09673881530761719 seconds
+Traceback (most recent call last):
+  File "urldecode_invoker.py", line 130, in <module>
+    execute(decoded_args)
+  File "urldecode_invoker.py", line 74, in execute
+    exit(ret)
+  File "/azureml-envs/azureml_862fbd3b8df44d2c582aa46cf5a23700/lib/python3.8/_sitebuiltins.py", line 26, in __call__
+    raise SystemExit(code)
+SystemExit: 0
+

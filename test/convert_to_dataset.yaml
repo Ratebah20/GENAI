@@ -1,0 +1,85 @@
+amlModuleIdentifier:
+  namespace: azureml
+  moduleName: Convert to Dataset
+  moduleVersion: 0.0.190
+meta:
+  collectLogs: true
+metadata:
+  annotations:
+    tags: []
+    familyId: 72bf58e0-fc87-4bb1-9704-f1805003b975
+    contact: Microsoft Corporation
+    helpDocument: https://aka.ms/aml/convert-to-dataset
+category: Data Transformation
+description: Converts data input to the internal Dataset format used by Azure Machine
+  Learning designer.
+isDeterministic: true
+inputs:
+- name: Dataset
+  type: DataFrameDirectory
+  description: Input dataset
+- name: Action
+  type: Mode
+  default: None
+  description: Action to apply to input dataset
+  options:
+  - None
+  - SetMissingValues:
+    - name: Custom Missing Value
+      type: String
+      label: Custom missing value
+      default: '?'
+      description: Value indicating missing value token
+  - ReplaceValues:
+    - name: Replace
+      type: Mode
+      default: Missing
+      description: Specifies type of replacement for values
+      options:
+      - Missing
+      - Custom:
+        - name: Custom Value
+          type: String
+          label: Custom value
+          default: obs
+          description: Value to be replaced
+    - name: New Value
+      type: String
+      label: New value
+      default: '0'
+      description: Replacement value
+outputs:
+- name: Results dataset
+  type: DataFrameDirectory
+  description: Output dataset
+implementation:
+  container:
+    amlEnvironment:
+      name: AzureML-Designer
+      version: '89'
+    command:
+    - python
+    - invoker.py
+    - python
+    - -m
+    - azureml.studio.modulehost.module_invoker
+    - --module-name=azureml.studio.modules.data_format_conversions.convert_to_dataset.convert_to_dataset
+    args:
+    - --dataset
+    - inputPath: Dataset
+    - --action
+    - inputValue: Action
+    - - --custom-missing-value
+      - inputValue: Custom Missing Value
+    - - --replace
+      - inputValue: Replace
+    - - --custom-value
+      - inputValue: Custom Value
+    - - --new-value
+      - inputValue: New Value
+    - --results-dataset
+    - outputPath: Results dataset
+  servingEntry:
+    module: azureml.studio.modules.data_format_conversions.convert_to_dataset.convert_to_dataset
+    class: ConvertToDatasetModule
+    func: run
